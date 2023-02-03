@@ -18,8 +18,8 @@ RUN cd /usr/local/bin && \
   pip install --upgrade pip
 
 # pip library install
-RUN pip install -r requirements.txt
+RUN pip install -r req.txt
 
 EXPOSE 5000
 
-CMD python ./app.py
+CMD python ./app1.py
