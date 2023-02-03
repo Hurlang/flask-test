@@ -3,8 +3,8 @@ FROM ubuntu:latest
 WORKDIR /test
 COPY . .
 
-RUN add-apt-repository universe
 RUN apt-get update
+RUN add-apt-repository universe && apt-get update
 
 # install python
 RUN apt-get install -y software-properties-common
