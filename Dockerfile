@@ -7,7 +7,7 @@ RUN apt-get update && \
   apt-get install -y --no-install-recommends tzdata g++ curl
 
 # install python
-RUN apt install software-properties-common
+RUN apt-get install software-properties-common
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get install -y python3-pip python3.9.16-dev
 RUN cd /usr/local/bin && \
