@@ -3,7 +3,12 @@ FROM python:3.9.16
 WORKDIR /test
 COPY . .
 
-RUN pip install -r requirements.txt && sudo apt-get install g++ openjdk-8-jdk python3-dev python3-pip curl
+# java install
+RUN apt-get install -y openjdk-8-jdk
+ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk"
+
+# pip library install
+RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
