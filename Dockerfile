@@ -1,11 +1,12 @@
-FROM python:3.9.16
+FROM ubuntu:latest
 
 WORKDIR /test
 COPY . .
 
-# java install
 RUN apt-get update && \
   apt-get install -y --no-install-recommends tzdata g++ curl
+
+# java install
 RUN apt-get install -y openjdk-8-jdk
 ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk"
 
