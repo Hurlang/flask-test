@@ -18,6 +18,7 @@ RUN cd /usr/local/bin && \
   pip install --upgrade pip
 
 # pip library install
+RUN pip install --no-cache-dir tensorflow-cpu==2.11.0
 RUN pip install -r req.txt
 
 EXPOSE 5000
