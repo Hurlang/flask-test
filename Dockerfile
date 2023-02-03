@@ -4,7 +4,8 @@ WORKDIR /test
 COPY . .
 RUN apt-get update
 RUN apt-get install -y software-properties-common
-RUN add-apt-repository universe && apt-get update
+RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt-get update
 
 # install python
 
