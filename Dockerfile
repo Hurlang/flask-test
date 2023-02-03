@@ -9,7 +9,7 @@ RUN add-apt-repository universe && apt-get update
 # install python
 
 # RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get install -y python3-pip python3.9.16-dev
+RUN apt-get install -y python3-pip python3.9-dev
 RUN cd /usr/local/bin && \
   ln -s /usr/bin/python3 python && \
   ln -s /usr/bin/pip3 pip && \
