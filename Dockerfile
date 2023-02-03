@@ -2,12 +2,12 @@ FROM ubuntu:latest
 
 WORKDIR /test
 COPY . .
-
+RUN apt-get install -y software-properties-common
 RUN apt-get update
 RUN add-apt-repository universe && apt-get update
 
 # install python
-RUN apt-get install -y software-properties-common
+
 # RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get install -y python3-pip python3.9.16-dev
 RUN cd /usr/local/bin && \
